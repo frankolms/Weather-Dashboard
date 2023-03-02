@@ -4,7 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Weather Dashboard</h1>
+    </header>
+    <div id="main-window">
+      <div id="city-search">
+        <h2 class="search-header">Search for a City:</h2>
+        <form>
+          <input type="text" id="city-name" placeholder="City" />
+        </form>
+        <button id="search-city">Search</button>
+      </div>
+      <div id="forecast">
+        <div id="current-weather">
+          <h2 id="city-and-date">City & Today's Date</h2>
+        </div>
+        <div id="five-day-forecast">
+          <h3>5-Day Forecast:</h3>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
