@@ -38,20 +38,32 @@ h2 {
 
 #forecast {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #city-and-date {
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0px 10px;
 }
 
 #current-weather {
   height: 250px;
   margin: 10px 20px;
   border: 1px solid black;
+  display: flex;
+}
+
+#current-conditions {
+  display: flex;
+  flex-direction: column;
 }
 
 #five-day-forecast {
   margin: 10px 20px;
+}
+
+#weather-img {
+  display: flex;
 }
 
 .search-header {
@@ -67,4 +79,14 @@ h2 {
 
 .recent-search:hover {
   background-color: gray;
+}
+
+.current-weather {
+  margin: 40px 0 0 10px;
+  font-weight: bold;
+}
+
+.weather-icon {
+  height: 45px;
+  width: 45px;
 }
