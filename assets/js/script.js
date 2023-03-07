@@ -8,12 +8,16 @@ var curWind = document.getElementById("current-wind");
 var curHumid = document.getElementById("current-humidity");
 var weatherImage = document.getElementById("weather-img");
 var conditionsIcon = document.getElementById("conditions-icon");
-// var currentWeather = document.getElementById("current-weather");
-// var conditions;
-var cities = [];
-console.log(cities);
-
 currentDate.textContent = todaysDate;
+
+var cities = [];
+cities = JSON.parse(localStorage.getItem("cityName")) || [];
+for (var i = 0; i < cities.length; i++) {
+  var renderSearches = document.createElement("button");
+  renderSearches.classList.add("recent-search");
+  renderSearches.innerHTML = cities[i];
+  citySearch.appendChild(renderSearches);
+}
 
 searchCity.addEventListener("click", function () {
   if (!cityName.value) {
@@ -28,8 +32,10 @@ searchCity.addEventListener("click", function () {
     recentSearch.classList.add("recent-search");
     citySearch.appendChild(recentSearch);
     cityName.value = "";
-    cities.push(recentSearch.textContent);
+
+    cities.push(cityNameCapitalized);
     console.log(cities);
+    console.log(cities.length);
     localStorage.setItem("cityName", JSON.stringify(cities));
     getLocation(cityNameCapitalized);
   }
@@ -90,11 +96,3 @@ function displayCurrentWeather(
     "http://openweathermap.org/img/wn/" + currentConditions + "@2x.png";
   conditionsIcon.classList.add("weather-icon");
 }
-
-//   var weatherIcon = document.createElement("img");
-//   weatherIcon.src =
-//     "http://openweathermap.org/img/wn/" + currentConditions + "@2x.png";
-//   weatherIcon.classList.add("weather-icon");
-//   // weatherImage.removeChild(weatherIcon);
-//   weatherImage.appendChild(weatherIcon);
-// }
