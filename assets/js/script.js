@@ -191,7 +191,7 @@ function displayCurrentWeather() {
   curWind.textContent = "Wind: " + weather.wind.speed + " MPH";
   curHumid.textContent = "Humidity: " + weather.main.humidity + "%";
   conditionsIcon.src =
-    "http://openweathermap.org/img/wn/" + weather.weather[0].icon + "@2x.png";
+    "https://openweathermap.org/img/wn/" + weather.weather[0].icon + "@2x.png";
   conditionsIcon.classList.add("weather-icon");
 }
 
@@ -232,7 +232,7 @@ function appendSearches() {
         curWind.textContent = "Wind: " + data.wind.speed + " MPH";
         curHumid.textContent = "Humidity: " + data.main.humidity + "%";
         conditionsIcon.src =
-          "http://openweathermap.org/img/wn/" +
+          "https://openweathermap.org/img/wn/" +
           data.weather[0].icon +
           "@2x.png";
         conditionsIcon.classList.add("weather-icon");
