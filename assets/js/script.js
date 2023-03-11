@@ -29,7 +29,7 @@ for (var i = 0; i < cities.length; i++) {
   citySearch.appendChild(renderSearches);
   renderSearches.addEventListener("click", function (event) {
     var getLatLonUrl =
-      "http://api.openweathermap.org/geo/1.0/direct?q=" +
+      "https://api.openweathermap.org/geo/1.0/direct?q=" +
       event.target.innerHTML +
       "&limit=5&appid=1141a80686092d25c69d34727f3d9734";
     fetch(getLatLonUrl)
@@ -56,7 +56,7 @@ for (var i = 0; i < cities.length; i++) {
         curWind.textContent = "Wind: " + data.wind.speed + " MPH";
         curHumid.textContent = "Humidity: " + data.main.humidity + "%";
         conditionsIcon.src =
-          "http://openweathermap.org/img/wn/" +
+          "https://openweathermap.org/img/wn/" +
           data.weather[0].icon +
           "@2x.png";
         conditionsIcon.classList.add("weather-icon");
@@ -100,7 +100,7 @@ searchCity.addEventListener("click", function () {
 
 function getLocation(cityNameCapitalized) {
   var getLatLonUrl =
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
     cityNameCapitalized +
     "&limit=5&appid=1141a80686092d25c69d34727f3d9734";
   fetch(getLatLonUrl)
@@ -160,7 +160,7 @@ function displayFiveDayForecast(data) {
       fiveDayChild1.append(futureDate);
       var futureIcon = document.createElement("img");
       futureIcon.src =
-        "http://openweathermap.org/img/wn/" +
+        "https://openweathermap.org/img/wn/" +
         data.list[i].weather[0].icon +
         "@2x.png";
       futureIcon.classList.add("weather-icon");
@@ -205,7 +205,7 @@ function appendSearches() {
   cityName.value = "";
   recentSearch.addEventListener("click", function (event) {
     var getLatLonUrl =
-      "http://api.openweathermap.org/geo/1.0/direct?q=" +
+      "https://api.openweathermap.org/geo/1.0/direct?q=" +
       event.target.innerHTML +
       "&limit=5&appid=1141a80686092d25c69d34727f3d9734";
     fetch(getLatLonUrl)
