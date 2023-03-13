@@ -4,4 +4,4 @@ This is a weather dashboard that takes a city from the user as an input and disp
 
 ![Alt text](<./assets/Screenshot%20(37).png>)
 
-Deployed project:
+Deployed project: https://frankolms.github.io/Weather-Dashboard/
